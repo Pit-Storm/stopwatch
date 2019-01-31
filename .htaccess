@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Zugriff auf .htaccess verweigern
+RewriteRule ^\.htaccess$ - [F]
+
+# Verzeichnis Root
+RewriteBase /ebis3/
+
+# 404 Fehlerseite
+ErrorDocument 404 http://bob.bwl.uni-mainz.de/ebis3/fehler-404.htm
+
+# .php Endungen in .htm Umwandeln
+# -TODO Alle harten Links umwandeln
+# RewriteRule ^(.*)\.htm$ $1.php
+
+</IfModule>
+
